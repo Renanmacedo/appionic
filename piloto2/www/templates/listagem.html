@@ -1,16 +1,13 @@
 <ion-view title="Lista de carros">
-    <ion-header-bar align-title="center" class="bar bar-stable">
-  <div class="buttons">
-    <button class="button icon ion-navicon" ng-click="showHide();"></button>
-  </div>
-  <h1 class="title">Lista de Carros</h1>
-</ion-header-bar>
+    <ion-nav-title>Lista de carros</ion-nav-title>
     <ion-content>
         <ion-list ng-repeat="item in listaCarros">
-            <ion-item>{{item.modelo}} - {{item.codigo}}</ion-item>
+            <ion-item href="#/carroescolhido/{{item}}">
+                {{item.modelo}} - R{{item.valor | currency}}
+           </ion-item>
         </ion-list>
     </ion-content>
-    <ion-footer-bar align-title="center" class="bar bar-stable">
+    <ion-footer-bar align-title="center" class="bar bar-calm">
         <h1 class="title">&copy Renan Aquino</h1>
         <div class="buttons">
             <button class="button icon ion-gear-a"></button>
