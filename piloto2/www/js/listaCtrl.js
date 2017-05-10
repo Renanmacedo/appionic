@@ -45,3 +45,27 @@ angular.module('starter')
         });
     };
   });
+  angular.module('starter')
+    .controller('LoginCtrl',function($scope, $ionicPopup, $state){
+        $scope.login = {};
+        $scope.email = 'teste@teste.com';
+        $scope.senha = 'teste123';
+        $scope.realizarLogin = function(){
+            var dadosLogin = {
+                params: {
+                    email: $scope.login.email,
+                    senha: $scope.login.senha
+                }
+            }
+            if($scope.senha == dadosLogin.params.senha
+                && $scope.email == dadosLogin.params.email){
+                    $state.go("app.listagem");
+            }else{
+                $ionicPopup.alert({
+                    title: 'Ocorreu um erro',
+                    template:  'Senha ou Email incorretos'
+                });
+            }
+        }
+
+    })
