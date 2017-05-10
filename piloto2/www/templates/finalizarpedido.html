@@ -1,0 +1,36 @@
+
+<ion-view>
+  <ion-nav-title>Finalizar Pedido</ion-nav-title>
+    <ion-content>
+       <div class="card">
+            <div class="item item item-divider">
+                <span><b>Produto escolhhido:</b>
+                    {{finalizado.nome}}
+                </span><br/>
+                <span><b>Total:</b>
+                    R{{finalizado.preco | currency}}
+                </span>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Primeiro Nome</span>
+                        <input type="text" placeholder="Joao" ng-model="pedido.nome">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Endereco</span>
+                        <input type="text" placeholder="rua das araras" ng-model="pedido.endereco">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" placeholder="exemple@exemple.com" ng-model="pedido.email">
+                    </label>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+            <button class="button button-calm button-full" ng-click="showConfirm()">Concluir</button>
+    </ion-content>
+</ion-view>

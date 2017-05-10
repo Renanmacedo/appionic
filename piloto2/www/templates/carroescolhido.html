@@ -6,12 +6,12 @@
                 <h1>Otima Escolha</h1>
             </div>
             <div class="item item-text-wrap">
-                <h1>{{carroEscolhido.modelo}}</h1>
+                <h1>{{carroEscolhido.nome}}</h1>
                 <ul class="list">
                       <li class="item item-toggle" ng-repeat="acessorio in listaAcessorios">
                         {{acessorio.nome}} - R{{acessorio.preco | currency}}
                         <label class="toggle toggle-calm">
-                        <input type="checkbox" ng-model="isMarcado" 
+                        <input type="checkbox" ng-model="isMarcado"
                             ng-click="acessorioMarcado(acessorio, isMarcado)">
                         <div class="track">
                             <div class="handle"></div>
@@ -21,8 +21,11 @@
                 </ul>
             </div>
             <div class="item item-divider">
-                <h1>R{{carroEscolhido.valor | currency}}</h1>
+                <h1>R{{carroEscolhido.preco | currency}}</h1>
             </div>
         </div>
+        <a href="#/finalizarpedido/{{carroEscolhido}}" class="button button-calm button-full">
+            Finalizar Pedido
+        </a>
     </ion-content>
 </ion-view>
