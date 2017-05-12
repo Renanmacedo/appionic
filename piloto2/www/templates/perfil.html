@@ -1,0 +1,29 @@
+<ion-nav-view view-title="Perfil">
+    <ion-content>
+        <div class="list card">
+                <div class="item item-avatar">
+                    <img ng-src="{{caminhoImagem}}" />
+                    Usuario Logado
+                    <button class="button button-full button-positive" ng-click="tirarFoto()">Titar Foto</button>
+                 </div>
+                <div class="item item-body">
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="item item-label" ng-show="!isEditado">{{usuario.email}}</span>
+                            <input class="item item-input" ng-model="usuario.email" ng-show="isEditado">
+                        </label>
+                        <label class="item item-input">
+                            <span class="item item-label" ng-show="!isEditado">{{usuario.nome}}</span>
+                            <input class="item item-input" ng-model="usuario.nome" ng-show="isEditado">
+                        </label>
+                        <label class="item item-input">
+                            <span class="item item-label" ng-show="!isEditado">{{usuario.data}}</span>
+                            <input class="item item-input" ng-show="isEditado" ng-model="usuario.data ">
+                        </label>
+                        <button class="button button-full button-positive" ng-click="editar()" ng-show="!isEditado">Editar</button>
+                        <button class="button button-full button-positive" ng-click="salvar()">Salvar</button>
+                    </div>
+                </div>
+        </div>
+    </ion-content>
+</ion-nav-view>

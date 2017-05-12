@@ -1,13 +1,13 @@
-<ion-view title="Lista de carros">
-    <ion-nav-title>Lista de carros</ion-nav-title>
+<ion-view view-title="Lista de carros">
+
     <ion-content>
         <ion-list ng-repeat="item in listaCarros">
-            <ion-item href="#/carroescolhido/{{item}}">
+            <ion-item href="#/app/carroescolhido/{{item}}">
                 {{item.nome}} - R{{item.preco | currency}}
            </ion-item>
         </ion-list>
     </ion-content>
-    <ion-footer-bar align-title="center" class="bar bar-calm">
+    <ion-footer-bar align-title="center" class="bar bar-positive">
         <h1 class="title">&copy Renan Aquino</h1>
         <div class="buttons">
             <button class="button icon ion-gear-a"></button>

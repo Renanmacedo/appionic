@@ -16,15 +16,41 @@ angular.module("starter")
             }
         }
     })
-    .state('carroescolhido',{
-        url: '/carroescolhido/:carro',
-        templateUrl: 'templates/carroescolhido.html',
-        controller: 'carroEscolhidoCtrl'
+    .state('app.perfil',{
+        url: '/perfil',
+        views:{
+            'menuContent':{
+                templateUrl:  'templates/perfil.html',
+                controller: 'perfilCtrl'
+            }
+        }
     })
-    .state('finalizarpedido',{
+    .state('app.listaUsuarios',{
+        url: '/listaUsuarios',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/listaUsuarios.html',
+                controller:   'listaUsuariosCtrl'
+            }
+        }
+    })
+    .state('app.carroescolhido',{
+        url: '/carroescolhido/:carro',
+         views: {
+             'menuContent':{
+                templateUrl: 'templates/carroescolhido.html',
+                controller: 'carroEscolhidoCtrl'
+             }
+         }
+    })
+    .state('app.finalizarpedido',{
         url:'/finalizarpedido/:carroEscolhido',
-        templateUrl: 'templates/finalizarpedido.html',
-        controller: 'finalizarPedidoCtrl'
+        views:{
+            'menuContent':{
+                templateUrl: 'templates/finalizarpedido.html',
+                controller: 'finalizarPedidoCtrl'
+            }
+        }
     })
     .state('login',{
         url: '/login',
