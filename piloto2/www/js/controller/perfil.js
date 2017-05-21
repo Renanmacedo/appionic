@@ -1,5 +1,5 @@
 angular.module('starter')
-    .controller('perfilCtrl',function($scope, $rootScope, $cordovaCamera,DataBaseValues){
+    .controller('perfilCtrl',function($scope, $rootScope, $cordovaCamera){
        $scope.isEditado = false;
        $scope.usuario = $rootScope.usuario;
        $scope.editar = function(){
@@ -8,21 +8,6 @@ angular.module('starter')
            }else{
                $scope.isEditado = true;
            }
-       }
-       $scope.salvar = function(){
-            $scope.insert();
-       }
-       $scope.insert = function(){
-           var params = {
-               nome: $scope.usuario.nome,
-               email: $scope.usuario.email,
-               data: $scope.usuario.data
-           };
-           DataBaseValues.setup();
-           DataBaseValues.bancoDados.transaction(function(transacao){
-               let sql = "INSERT INTO perfil (nome, email, data) VALUES (?,?,?)";
-               transacao.executeSql(sql, [params.nome, params.email, params.data]);
-           })
        }
       $scope.tirarFoto = function(data) {
             var params = {

@@ -1,1 +1,24 @@
 /* Empty. Add your own CSS if you like */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat');
+.background-login{background: rgba(226,226,226,1);}
+.ion-login{margin-top: 40% !important;}
+ion-login .ion-text-logo-head{margin-top: auto; padding-bottom: 10%;}
+.ion-button-custom{
+background: rgba(33,180,226,1);
+background: -moz-linear-gradient(left, rgba(33,180,226,1) 7%, rgba(33,179,226,1) 8%, rgba(33,163,227,1) 32%, rgba(32,151,228,1) 50%, rgba(32,124,229,1) 90%);
+background: -webkit-gradient(left top, right top, color-stop(7%, rgba(33,180,226,1)), color-stop(8%, rgba(33,179,226,1)), color-stop(32%, rgba(33,163,227,1)), color-stop(50%, rgba(32,151,228,1)), color-stop(90%, rgba(32,124,229,1)));
+background: -webkit-linear-gradient(left, rgba(33,180,226,1) 7%, rgba(33,179,226,1) 8%, rgba(33,163,227,1) 32%, rgba(32,151,228,1) 50%, rgba(32,124,229,1) 90%);
+background: -o-linear-gradient(left, rgba(33,180,226,1) 7%, rgba(33,179,226,1) 8%, rgba(33,163,227,1) 32%, rgba(32,151,228,1) 50%, rgba(32,124,229,1) 90%);
+background: -ms-linear-gradient(left, rgba(33,180,226,1) 7%, rgba(33,179,226,1) 8%, rgba(33,163,227,1) 32%, rgba(32,151,228,1) 50%, rgba(32,124,229,1) 90%);
+background: linear-gradient(to right, rgba(33,180,226,1) 7%, rgba(33,179,226,1) 8%, rgba(33,163,227,1) 32%, rgba(32,151,228,1) 50%, rgba(32,124,229,1) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21b4e2', endColorstr='#207ce5', GradientType=1 );
+color: #fff;
+}
+.ion-button-custom:hover{color: #fff;}
+.item-input{
+	background: transparent;
+	color: #fff;
+	border: none !important;
+	border-bottom: 2px solid #fff !important;
+}
+.icon-custon{color: #fff; font-size: 1.3em; left: 0; right: 0;}

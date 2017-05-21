@@ -1,17 +1,29 @@
-<ion-view view-title="Login">
-    <ion-content>
-        <form ng-submit="realizarLogin()">
-        <div class="list list-inset">
-            <label class="item item-input">
-                <span class="input-label">Nome</span>
-                <input type="text" name="nome" ng-model="login.email">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Senha</span>
-                <input type="password" name="senha" ng-model="login.senha">
-            </label>
-            <button class="button button-positive button-full" type="submit">Acessar</button>
+<ion-view view-title="Login">     
+<ion-content class="background-login">
+<div class="ion-login">             
+    <center></center><img src="img/logo_head.png"></center>
+         <form ng-submit="realizarLogin()">         
+         <div class="row responsive-sm responsive-md">
+            <div class="col">
+                <div class="list">
+                    <label class="item item-input">
+                        <i class="icon ion-person  placeholder-icon icon-custon"></i>
+                        <!--<ion-icon ios="ios-person" md="md-person"></ion-icon> -->
+                        <input type="email" name="nome" ng-model="login.email" placeholder="">
+                    </label>                 
+                </div>
+            </div>
+            <div class="col">                 
+                <label class="item item-input">
+                    <i class="icon ion-android-lock placeholder-icon icon-custon"></i>
+                    <input type="password" name="senha" ng-model="login.senha">
+                </label>             
+            </div>             
+            <div class="col col-50">
+            <button class="button ion-button-custom button-block" type="submit">Entrar</button>
+            </div>
         </div>
-        </form>
-    </ion-content>
+    </form>         
+    </div>    
+</ion-content> 
 </ion-view>
